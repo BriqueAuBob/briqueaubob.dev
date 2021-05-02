@@ -5,6 +5,7 @@
                 <a href="#informations"><li class="text-white px-3">About me</li></a>
                 <a href="#projects"><li class="text-white px-3">Projects</li></a>
                 <a href="#services"><li class="text-white px-3">Services</li></a>
+                <a href="#contact"><li class="text-white px-3">Contact</li></a>
             </ul>
         </nav>
     </div>
