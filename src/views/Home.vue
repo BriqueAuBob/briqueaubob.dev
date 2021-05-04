@@ -42,49 +42,49 @@
                 <div class="font-bold text-2xl text-white mb-4">My projects</div>
                 <div class="container mx-auto pb-12 sm:px-2 md:px-16 lg:px-48 grid grid-cols-1 xl:grid-cols-2 gap-8 mt-12">
                     <Project 
-                        logo="/src/assets/gca.png"
+                        logo="@/assets/gca.png"
                         name="Game Creators Area"
                         description="French community of mutual help about various domains of activity like development, level design, modeling, graphism..."
                         :languages="[
-                            '/src/assets/laravel.png',
-                            '/src/assets/php.png',
-                            '/src/assets/mysql.svg',
-                            '/src/assets/git.png',
-                            '/src/assets/nginx.png',
+                            '@/assets/laravel.png',
+                            '@/assets/php.png',
+                            '@/assets/mysql.svg',
+                            '@/assets/git.png',
+                            '@/assets/nginx.png',
                         ]" 
                     />
                     <Project 
-                        logo="/src/assets/ro-bot.png"
+                        logo="@/assets/ro-bot.png"
                         name="Ro-bot"
                         description="Website with goal to create a Discord bot with a very customizable system and a bot running on user defined token."
                         :languages="[
-                            '/src/assets/laravel.png',
-                            '/src/assets/php.png',
-                            '/src/assets/mongodb.png',
-                            '/src/assets/git.png',
-                            '/src/assets/nginx.png',
+                            '@/assets/laravel.png',
+                            '@/assets/php.png',
+                            '@/assets/mongodb.png',
+                            '@/assets/git.png',
+                            '@/assets/nginx.png',
                         ]" 
                     />
                     <Project 
-                        logo="/src/assets/wearevalorant.png"
+                        logo="@/assets/wearevalorant.png"
                         name="WeAreValorant"
                         description="It was designed to bring all the players of Valorant's game in a same place. A news system, tournament system and players find system was created for this."
                         :languages="[
-                            '/src/assets/adonis.png',
-                            '/src/assets/nodejs.png',
-                            '/src/assets/mysql.svg',
-                            '/src/assets/git.png',
-                            '/src/assets/nginx.png',
+                            '@/assets/adonis.png',
+                            '@/assets/nodejs.png',
+                            '@/assets/mysql.svg',
+                            '@/assets/git.png',
+                            '@/assets/nginx.png',
                         ]" 
                     />
                     <Project 
-                        logo="/src/assets/bobadmintoolkit.png"
+                        logo="@/assets/bobadmintoolkit.png"
                         name="BobAdminToolKit"
                         description="Garry’s Mod addon adding a lot of server administrators utilities like warns, logs, reports..."
                         :languages="[
-                            '/src/assets/sqlite.png',
-                            '/src/assets/mysql.svg',
-                            '/src/assets/lua.png',
+                            '@/assets/sqlite.png',
+                            '@/assets/mysql.svg',
+                            '@/assets/lua.png',
                         ]" 
                     />
                 </div>
@@ -98,22 +98,22 @@
                 <Service 
                     name="Back-End" 
                     description="I can do server-side of your project using PHP or NodeJS. Obviously, it includes DBMS management." 
-                    icon="/src/assets/icon_server.svg"
+                    icon="@/assets/icon_server.svg"
                 />
                 <Service 
                     name="Front-End" 
                     description="I can do client-side of your project using HTML/CSS/JS (also SaSS, NodeJS)." 
-                    icon="/src/assets/icon_eye.svg"
+                    icon="@/assets/icon_eye.svg"
                 />
                 <Service 
                     name="UI/UX Design" 
                     description="I can prototype your project to know if it looks good for you and if I can start development" 
-                    icon="/src/assets/icon_tools.svg"
+                    icon="@/assets/icon_tools.svg"
                 />
                 <Service 
                     name="Deployment" 
                     description="I can deploy your project on your server after development." 
-                    icon="/src/assets/icon_rocket.svg"
+                    icon="@/assets/icon_rocket.svg"
                 />
             </div>
         </section>
