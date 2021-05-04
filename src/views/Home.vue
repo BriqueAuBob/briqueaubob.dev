@@ -5,16 +5,16 @@
             <h2 class="text-3xl text-white font-medium mt-4">French Junior Developer</h2>
             <div class="flex justify-center mt-10">
                 <a class="bg-blue-500 rounded-full mx-2 transition ease-in transform hover hover:-translate-y-1" href="https://discord.com/users/307531336388968458" target="_blank">
-                    <img class="w-12 p-2.5" src="/discord.svg"/>
+                    <img class="w-12 p-2.5" src="@/assets/discord.svg"/>
                 </a>
                 <a class="bg-gray-800 rounded-full mx-2 transition ease-in transform hover hover:-translate-y-1" href="https://github.com/briqueaubob" target="_blank">
-                    <img class="w-12 p-2.5" src="/github.svg"/>
+                    <img class="w-12 p-2.5" src="@/assets/github.svg"/>
                 </a>
                 <a class="bg-gray-700 rounded-full mx-2 transition ease-in transform hover hover:-translate-y-1" href="https://steamcommunity.com/id/brickwithbob/" target="_blank">
-                    <img class="w-12 p-2.5" src="/steam.svg"/>
+                    <img class="w-12 p-2.5" src="@/assets/steam.svg"/>
                 </a>
             </div>
-            <img class="absolute left-0 transform translate-y-16 -z-10 w-full" src="/waves.svg"/>
+            <img class="absolute left-0 transform translate-y-16 -z-10 w-full" src="@/assets/waves.svg"/>
         </header>
         <section id="informations" class="container mx-auto md:px-48 mt-48 p-10 md:p-24">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
@@ -31,65 +31,65 @@
                     </p>
                 </div>
                 <div>
-                    <img class="mx-auto" src="/bogossito.svg" />
+                    <img class="mx-auto" src="@/assets/bogossito.svg" />
                 </div>
             </div>
         </section>
         <section id="projects" class="text-center">
-            <img class="relative -z-10 w-full transform translate-y-1" src="/waves_projects_top.svg" />
-            <div class="bg-gradient-to-r from-blue-700 to-blue-500">
+            <img class="relative -z-10 w-full transform translate-y-1" src="@/assets/waves_projects_top.svg" />
+            <div class="bg-gradient-to-r from-blue-700 to-blue-500 px-4 py-4">
                 <div class="font-normal text-md text-gray-400">#projects</div>
                 <div class="font-bold text-2xl text-white mb-4">My projects</div>
-                <div class="container mx-auto sm:px-2 md:px-16 lg:px-48 grid grid-cols-1 xl:grid-cols-2 gap-8 mt-12">
+                <div class="container mx-auto pb-12 sm:px-2 md:px-16 lg:px-48 grid grid-cols-1 xl:grid-cols-2 gap-8 mt-12">
                     <Project 
-                        logo="/gca.png"
+                        logo="/src/assets/gca.png"
                         name="Game Creators Area"
                         description="French community of mutual help about various domains of activity like development, level design, modeling, graphism..."
                         :languages="[
-                            '/laravel.png',
-                            '/php.png',
-                            '/mysql.svg',
-                            '/git.png',
-                            '/nginx.png',
+                            '/src/assets/laravel.png',
+                            '/src/assets/php.png',
+                            '/src/assets/mysql.svg',
+                            '/src/assets/git.png',
+                            '/src/assets/nginx.png',
                         ]" 
                     />
                     <Project 
-                        logo="/ro-bot.png"
+                        logo="/src/assets/ro-bot.png"
                         name="Ro-bot"
                         description="Website with goal to create a Discord bot with a very customizable system and a bot running on user defined token."
                         :languages="[
-                            '/laravel.png',
-                            '/php.png',
-                            '/mongodb.png',
-                            '/git.png',
-                            '/nginx.png',
+                            '/src/assets/laravel.png',
+                            '/src/assets/php.png',
+                            '/src/assets/mongodb.png',
+                            '/src/assets/git.png',
+                            '/src/assets/nginx.png',
                         ]" 
                     />
                     <Project 
-                        logo="/wearevalorant.png"
+                        logo="/src/assets/wearevalorant.png"
                         name="WeAreValorant"
                         description="It was designed to bring all the players of Valorant's game in a same place. A news system, tournament system and players find system was created for this."
                         :languages="[
-                            '/adonis.png',
-                            '/nodejs.png',
-                            '/mysql.svg',
-                            '/git.png',
-                            '/nginx.png',
+                            '/src/assets/adonis.png',
+                            '/src/assets/nodejs.png',
+                            '/src/assets/mysql.svg',
+                            '/src/assets/git.png',
+                            '/src/assets/nginx.png',
                         ]" 
                     />
                     <Project 
-                        logo="/bobadmintoolkit.png"
+                        logo="/src/assets/bobadmintoolkit.png"
                         name="BobAdminToolKit"
                         description="Garry’s Mod addon adding a lot of server administrators utilities like warns, logs, reports..."
                         :languages="[
-                            '/sqlite.png',
-                            '/mysql.svg',
-                            '/lua.png',
+                            '/src/assets/sqlite.png',
+                            '/src/assets/mysql.svg',
+                            '/src/assets/lua.png',
                         ]" 
                     />
                 </div>
             </div>
-            <img class="relative transform -translate-y-1 -z-10" src="/waves_projects_bottom.svg" />
+            <img class="relative transform -translate-y-1 -z-10 w-full" src="@/assets/waves_projects_bottom.svg" />
         </section>
         <section id="services" class="container text-center mx-auto px-4 lg:px-48 mt-8 md:p-24">
             <div class="font-normal text-md text-gray-400">#services</div>
@@ -98,26 +98,26 @@
                 <Service 
                     name="Back-End" 
                     description="I can do server-side of your project using PHP or NodeJS. Obviously, it includes DBMS management." 
-                    icon="/icon_server.svg"
+                    icon="/src/assets/icon_server.svg"
                 />
                 <Service 
                     name="Front-End" 
                     description="I can do client-side of your project using HTML/CSS/JS (also SaSS, NodeJS)." 
-                    icon="/icon_eye.svg"
+                    icon="/src/assets/icon_eye.svg"
                 />
                 <Service 
                     name="UI/UX Design" 
                     description="I can prototype your project to know if it looks good for you and if I can start development" 
-                    icon="/icon_tools.svg"
+                    icon="/src/assets/icon_tools.svg"
                 />
                 <Service 
                     name="Deployment" 
                     description="I can deploy your project on your server after development." 
-                    icon="/icon_rocket.svg"
+                    icon="/src/assets/icon_rocket.svg"
                 />
             </div>
         </section>
-        <section id="contact" class="text-center mx-auto md:px-72 mb-16">
+        <section id="contact" class="text-center mx-auto md:px-72 mt-16 md:mt-0 mb-16 px-8">
             <div class="bg-gradient-to-r from-blue-500 to-blue-700 p-10 rounded-xl shadow-2xl">
                 <div class="font-normal text-md text-gray-200">#contact</div>
                 <div class="font-bold text-2xl text-white mb-4">Have a project?</div>
