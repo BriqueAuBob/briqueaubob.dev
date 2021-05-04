@@ -42,49 +42,49 @@
                 <div class="font-bold text-2xl text-white mb-4">My projects</div>
                 <div class="container mx-auto pb-12 sm:px-2 md:px-16 lg:px-48 grid grid-cols-1 xl:grid-cols-2 gap-8 mt-12">
                     <Project 
-                        logo="@/assets/gca.png"
+                        :logo="icons.gca"
                         name="Game Creators Area"
                         description="French community of mutual help about various domains of activity like development, level design, modeling, graphism..."
                         :languages="[
-                            '@/assets/laravel.png',
-                            '@/assets/php.png',
-                            '@/assets/mysql.svg',
-                            '@/assets/git.png',
-                            '@/assets/nginx.png',
+                            icons.laravel,
+                            icons.php,
+                            icons.mysql,
+                            icons.git,
+                            icons.nginx,
                         ]" 
                     />
                     <Project 
-                        logo="@/assets/ro-bot.png"
+                        :logo="icons.robot"
                         name="Ro-bot"
                         description="Website with goal to create a Discord bot with a very customizable system and a bot running on user defined token."
                         :languages="[
-                            '@/assets/laravel.png',
-                            '@/assets/php.png',
-                            '@/assets/mongodb.png',
-                            '@/assets/git.png',
-                            '@/assets/nginx.png',
+                            icons.laravel,
+                            icons.php,
+                            icons.mongodb,
+                            icons.git,
+                            icons.nginx,
                         ]" 
                     />
                     <Project 
-                        logo="@/assets/wearevalorant.png"
+                        :logo="icons.wearevalorant"
                         name="WeAreValorant"
                         description="It was designed to bring all the players of Valorant's game in a same place. A news system, tournament system and players find system was created for this."
                         :languages="[
-                            '@/assets/adonis.png',
-                            '@/assets/nodejs.png',
-                            '@/assets/mysql.svg',
-                            '@/assets/git.png',
-                            '@/assets/nginx.png',
+                            icons.adonis,
+                            icons.nodejs,
+                            icons.mysql,
+                            icons.git,
+                            icons.nginx,
                         ]" 
                     />
                     <Project 
-                        logo="@/assets/bobadmintoolkit.png"
+                        :logo="icons.bobadmintoolkit"
                         name="BobAdminToolKit"
                         description="Garry’s Mod addon adding a lot of server administrators utilities like warns, logs, reports..."
                         :languages="[
-                            '@/assets/sqlite.png',
-                            '@/assets/mysql.svg',
-                            '@/assets/lua.png',
+                            icons.sqlite,
+                            icons.mysql,
+                            icons.lua,
                         ]" 
                     />
                 </div>
@@ -98,22 +98,22 @@
                 <Service 
                     name="Back-End" 
                     description="I can do server-side of your project using PHP or NodeJS. Obviously, it includes DBMS management." 
-                    icon="@/assets/icon_server.svg"
+                    :icon="icons.server"
                 />
                 <Service 
                     name="Front-End" 
                     description="I can do client-side of your project using HTML/CSS/JS (also SaSS, NodeJS)." 
-                    icon="@/assets/icon_eye.svg"
+                    :icon="icons.eye"
                 />
                 <Service 
                     name="UI/UX Design" 
                     description="I can prototype your project to know if it looks good for you and if I can start development" 
-                    icon="@/assets/icon_tools.svg"
+                    :icon="icons.tools"
                 />
                 <Service 
                     name="Deployment" 
                     description="I can deploy your project on your server after development." 
-                    icon="@/assets/icon_rocket.svg"
+                    :icon="icons.rocket"
                 />
             </div>
         </section>
@@ -131,7 +131,39 @@
 <script>
 import Project from '@/components/Project.vue'
 import Service from '@/components/Service.vue'
+
+import gca from '@/assets/gca.png'
+import robot from '@/assets/ro-bot.png'
+import wearevalorant from '@/assets/wearevalorant.png'
+import bobadmintoolkit from '@/assets/bobadmintoolkit.png'
+
+import nginx from '@/assets/nginx.png'
+import php from '@/assets/php.png'
+import lua from '@/assets/lua.png'
+import mysql from '@/assets/mysql.svg'
+import mongodb from '@/assets/mongodb.png'
+import nodejs from '@/assets/nodejs.png'
+import laravel from '@/assets/laravel.png'
+import sqlite from '@/assets/sqlite.png'
+import git from '@/assets/git.png'
+import adonis from '@/assets/adonis.png'
+
+import server from '@/assets/icon_server.svg'
+import eye from '@/assets/icon_eye.svg'
+import tools from '@/assets/icon_tools.svg'
+import rocket from '@/assets/icon_rocket.svg'
+
 export default {
-    components: { Project, Service }
+    components: { Project, Service },
+    data() {
+        return {
+            icons: {
+                gca, bobadmintoolkit, robot, wearevalorant, nginx, lua, php, nodejs, laravel, adonis, mysql, sqlite, mongodb, git, server, eye, tools, rocket
+            }
+        }
+    },
+    mounted() {
+        console.log(this.icons)
+    }
 }
 </script>
