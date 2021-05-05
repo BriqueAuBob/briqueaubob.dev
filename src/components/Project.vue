@@ -12,7 +12,7 @@
         <div class="w-full">
             <hr class="my-5 border-gray-700"/>
             <div class="flex flex-wrap justify-end">
-                <img class="h-10 ml-6" v-for="(language, key) in languages" v-bind:key="key" :src="language"/>
+                <img class="h-10 ml-6 mb-1 md:mb-0" v-for="(language, key) in languages" v-bind:key="key" :src="language"/>
             </div>
         </div>
     </div>
