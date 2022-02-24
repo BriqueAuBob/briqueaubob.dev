@@ -24,7 +24,7 @@
                         <div class="font-bold text-2xl text-white mb-4">About me</div>
                     </div>
                     <p class="font-medium text-xl text-gray-400 leading-relaxed">
-                        I’m Brique au bob, an 18yo french developer.
+                        I’m Brique au bob, an {{ age }}yo french developer.
                         Mainly, i’m a back-end developer but i’m really
                         interested in learning front-end and UI/UX Design. 
                         I’m learning programing since I was 14.
@@ -162,8 +162,12 @@ export default {
             }
         }
     },
-    mounted() {
-        console.log(this.icons)
+    computed: {
+        age() {
+            const birthDate = new Date('Thu Jan 16 2003 01:00:00 GMT+0100');
+            const diff = Date.now() - birthDate.getTime();
+            return Math.abs((new Date(diff)).getFullYear() - 1970);
+        }
     }
 }
 </script>
