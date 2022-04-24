@@ -71,8 +71,8 @@
         <section class="container mx-auto text-white py-16 px-4" id="skills">
             <div class="font-bold text-5xl" data-aos="fade">Tech Stack</div>
             <div class="flex flex-wrap gap-4 mt-6">
-                <div v-for="(skill, id) of skills" :key="id" class="px-4 py-3 flex items-center gap-2 shadow-lg" :style="`background: ${skill.color}`" data-aos="zoom-in-up">
-                    <img class="w-8 h-fit brightness-0 invert" :src="skill.src" />
+                <div v-for="(skill, id) of skills" :key="id" class="px-4 py-3 flex items-center gap-2 shadow-lg flex-start" :style="`background: ${skill.color}`" data-aos="zoom-in-up">
+                    <img class="w-8 brightness-0 invert" :src="skill.src" />
                     <span v-if="skill.name" class="text-sm font-medium">{{ skill.name }}</span>
                 </div>
             </div>
