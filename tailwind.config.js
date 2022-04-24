@@ -4,22 +4,21 @@ module.exports = {
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: {
-      'blue': {
-        500: '#0085FF',
-        700: '#0C579D',
-      },
-      'white': colors.white,
-      'gray': colors.gray
-    },
     fontFamily: {
-      'sans': ['Open Sans', 'system-ui'],
+      'sans': ['Graphik', 'system-ui'],
       'serif': ['ui-serif', 'Georgia'],
-      'mono': ['ui-monospace', 'SFMono-Regular'],
-      'display': ['Oswald'],
-      'body': ['Open Sans'],
     },
     extend: {
+      colors: {
+        "primary": "#290DD3",
+        'dark': '#080420',
+        'blue': {
+          500: '#0085FF',
+          700: '#0C579D',
+        },
+        'white': colors.white,
+        'gray': colors.gray
+      },
       zIndex: {
         '-10': '-10',
       }

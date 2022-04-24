@@ -1,173 +1,281 @@
 <template>
-    <div>
-        <header class="header bg-gradient-to-r from-blue-700 to-blue-500 px-10 py-16 text-center">
-            <h1 class="text-5xl text-white font-bold mt-32">Brique au bob</h1>
-            <h2 class="text-3xl text-white font-medium mt-4">French Junior Developer</h2>
-            <div class="flex justify-center mt-10">
-                <a class="bg-blue-500 rounded-full mx-2 transition ease-in transform hover hover:-translate-y-1" href="https://discord.com/users/307531336388968458" target="_blank">
-                    <img class="w-12 p-2.5" src="@/assets/discord.svg"/>
+    <div class="overflow-x-hidden">
+        <header class="relative bg-primary py-72 text-center text-white" style="background: url('./grid-waves.png') no-repeat center center / cover, #290DD3;" data-aos="fade">
+            <h1 class="text-6xl font-bold" data-aos="zoom-in-up">Brique au bob</h1>
+            <h2 class="text-3xl font-semibold mt-4" data-aos="zoom-in-up">French FullStack Developer</h2>
+            <div class="flex gap-4 justify-center mt-8" data-aos="zoom-in-up">
+                <a href="#" class="bg-white px-6 py-4 text-black text-md font-medium">
+                    View my projects
                 </a>
-                <a class="bg-gray-800 rounded-full mx-2 transition ease-in transform hover hover:-translate-y-1" href="https://github.com/briqueaubob" target="_blank">
-                    <img class="w-12 p-2.5" src="@/assets/github.svg"/>
-                </a>
-                <a class="bg-gray-700 rounded-full mx-2 transition ease-in transform hover hover:-translate-y-1" href="https://steamcommunity.com/id/brickwithbob/" target="_blank">
-                    <img class="w-12 p-2.5" src="@/assets/steam.svg"/>
+                <a href="#" class="px-6 py-4 text-md font-medium">
+                    Contact me
                 </a>
             </div>
-            <img class="absolute left-0 transform translate-y-16 -z-10 w-full" src="@/assets/waves.svg"/>
+            <img src="@/assets/shape_wavy.svg" class="absolute left-0 top-1/2 -translate-y-1/2 hidden md:block w-1/4 lg:w-1/3" />
+            <img src="@/assets/shape_wavy.svg" class="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block w-1/4 lg:w-1/3 -scale-100" />
+            <div class="bg-gradient-to-t from-transparent to-primary absolute top-0 h-52 w-full"></div>
+            <div class="bg-gradient-to-b from-transparent to-dark absolute bottom-0 h-48 w-full"></div>
         </header>
-        <section id="informations" class="container mx-auto md:px-48 mt-48 p-10 md:p-24">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
-                <div class="flex flex-wrap content-center">
-                    <div>
-                        <div class="font-normal text-md text-gray-400">#informations</div>
-                        <div class="font-bold text-2xl text-white mb-4">About me</div>
+        <section class="container mx-auto flex text-white py-32 gap-16 items-center px-4">
+            <div class="flex flex-col gap-4" data-aos="fade">
+                <div class="text-4xl font-bold">Services I Provide</div>
+                <div class="text-lg font-medium max-w-lg">Get the best variety of skills for your growing project</div>
+            </div>
+            <div class="lg:flex gap-12 w-full">
+                <div v-for="(service, index) of services" :key="index" class="relative w-full" data-aos="zoom-in">
+                    <div class="bg-primary p-8" :class="[index === 1 ? 'mt-6' : index === 2 && 'mt-6 lg:mt-12']">{{ service }}</div>
+                    <div v-if="index === 0" class="absolute right-full translate-x-2/3 bottom-2/3 w-16 h-16 bg-primary rounded-full bg-opacity-25 hidden md:block"></div>
+                    <div v-else-if="index === 1" class="absolute right-8 translate-x-3/4 -top-4 w-24 h-24 bg-primary rounded-full bg-opacity-25 hidden md:block"></div>
+                    <div v-else class="absolute -right-6 -bottom-4 w-16 h-16 bg-primary rounded-full bg-opacity-25 hidden md:block"></div>
+                </div>
+            </div>
+        </section>
+        <section class="container mx-auto text-white py-16 px-4" id="experiences">
+            <div class="relative">
+                <div class="font-bold text-5xl absolute -top-8 z-10" data-aos="fade">Experiences</div>
+            </div>
+            <div class="grid lg:grid-cols-5 gap-8">
+                <Experience v-for="(experience, id) of experiences" :key="id" :class="experience.classes" :style="experience.style" :experience="experience" :hideOverlay="experience.hideOverlay" />
+                <div class="flex flex-col gap-4 p-8 lg:col-span-2" data-aos="fade-up">
+                    <div class="text-4xl font-bold">Next project with you?</div>
+                    <div class="text-lg font-medium max-w-lg">I’m available for hire, contact me to talk me about your project !</div>
+                    <div class="mt-6">
+                        <a href="#" class="bg-white px-6 py-4 text-black text-md font-medium">
+                            Contact me
+                        </a>
                     </div>
-                    <p class="font-medium text-xl text-gray-400 leading-relaxed">
-                        I’m Brique au bob, an {{ age }}yo french developer.
-                        Mainly, i’m a back-end developer but i’m really
-                        interested in learning front-end and UI/UX Design. 
-                        I’m learning programing since I was 14.
-                    </p>
-                </div>
-                <div>
-                    <img class="mx-auto" src="@/assets/bogossito.svg" />
                 </div>
             </div>
         </section>
-        <section id="projects" class="text-center">
-            <img class="relative -z-10 w-full transform translate-y-1" src="@/assets/waves_projects_top.svg" />
-            <div class="bg-gradient-to-r from-blue-700 to-blue-500 px-4 py-4">
-                <div class="font-normal text-md text-gray-400">#projects</div>
-                <div class="font-bold text-2xl text-white mb-4">My projects</div>
-                <div class="container mx-auto pb-12 sm:px-2 md:px-16 lg:px-48 grid grid-cols-1 xl:grid-cols-2 gap-8 mt-12">
-                    <Project 
-                        :logo="icons.gca"
-                        name="Game Creators Area"
-                        description="French community of mutual help about various domains of activity like development, level design, modeling, graphism..."
-                        :languages="[
-                            icons.laravel,
-                            icons.php,
-                            icons.mysql,
-                            icons.git,
-                            icons.nginx,
-                        ]" 
-                    />
-                    <Project 
-                        :logo="icons.robot"
-                        name="Ro-bot"
-                        description="Website with goal to create a Discord bot with a very customizable system and a bot running on user defined token."
-                        :languages="[
-                            icons.laravel,
-                            icons.php,
-                            icons.mongodb,
-                            icons.git,
-                            icons.nginx,
-                        ]" 
-                    />
-                    <Project 
-                        :logo="icons.wearevalorant"
-                        name="WeAreValorant"
-                        description="It was designed to bring all the players of Valorant's game in a same place. A news system, tournament system and players find system was created for this."
-                        :languages="[
-                            icons.adonis,
-                            icons.nodejs,
-                            icons.mysql,
-                            icons.git,
-                            icons.nginx,
-                        ]" 
-                    />
-                    <Project 
-                        :logo="icons.bobadmintoolkit"
-                        name="BobAdminToolKit"
-                        description="Garry’s Mod addon adding a lot of server administrators utilities like warns, logs, reports..."
-                        :languages="[
-                            icons.sqlite,
-                            icons.mysql,
-                            icons.lua,
-                        ]" 
-                    />
+        <section class="text-white py-24 px-4 relative" id="projects">
+            <div class="container mx-auto">
+                <div class="relative">
+                    <div class="font-bold text-5xl absolute -top-8 z-10" data-aos="fade">Personal Projects</div>
+                </div>
+                <div class="grid lg:grid-cols-6 gap-8">
+                    <Experience v-for="(project, id) of projects" :key="id" :class="project.classes" :style="project.style" :experience="project" :overlay="true">
+                        <div class="mt-6 flex gap-3">
+                            <a v-if="project.href" target="_blank" :href="project.href" class="bg-white px-6 py-4 text-black text-md font-medium">
+                                View project
+                            </a>
+                            <a v-if="project.github" target="_blank" :href="project.github" class="border hover:bg-white ease-in duration-300 hover:text-black px-6 py-4 text-white text-md">
+                                Source code
+                            </a>
+                        </div>
+                    </Experience>
                 </div>
             </div>
-            <img class="relative transform -translate-y-1 -z-10 w-full" src="@/assets/waves_projects_bottom.svg" />
+            <img class="absolute top-0 left-0 -z-10 w-1/2" src="@/assets/shape_rect.svg" />
+            <img class="absolute top-0 -right-1/4 -z-10 w-1/2 -scale-100" src="@/assets/shape_rect.svg" />
         </section>
-        <section id="services" class="container text-center mx-auto px-4 lg:px-48 mt-8 md:p-24">
-            <div class="font-normal text-md text-gray-400">#services</div>
-            <div class="font-bold text-2xl text-white mb-4">My services</div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10 items-start">
-                <Service 
-                    name="Back-End" 
-                    description="I can do server-side of your project using PHP or NodeJS. Obviously, it includes DBMS management." 
-                    :icon="icons.server"
-                />
-                <Service 
-                    name="Front-End" 
-                    description="I can do client-side of your project using HTML/CSS/JS (also SaSS, NodeJS)." 
-                    :icon="icons.eye"
-                />
-                <Service 
-                    name="UI/UX Design" 
-                    description="I can prototype your project to know if it looks good for you and if I can start development" 
-                    :icon="icons.tools"
-                />
-                <Service 
-                    name="Deployment" 
-                    description="I can deploy your project on your server after development." 
-                    :icon="icons.rocket"
-                />
+        <section class="container mx-auto text-white py-16 px-4" id="skills">
+            <div class="font-bold text-5xl" data-aos="fade">Tech Stack</div>
+            <div class="flex flex-wrap gap-4 mt-6">
+                <div v-for="(skill, id) of skills" :key="id" class="px-4 py-3 flex items-center gap-2 shadow-lg" :style="`background: ${skill.color}`" data-aos="zoom-in-up">
+                    <img class="w-8 h-fit brightness-0 invert" :src="skill.src" />
+                    <span v-if="skill.name" class="text-sm font-medium">{{ skill.name }}</span>
+                </div>
             </div>
         </section>
-        <section id="contact" class="text-center mx-auto md:px-72 mt-16 md:mt-0 mb-16 px-8">
-            <div class="bg-gradient-to-r from-blue-500 to-blue-700 p-10 rounded-xl shadow-2xl">
-                <div class="font-normal text-md text-gray-200">#contact</div>
-                <div class="font-bold text-2xl text-white mb-4">Have a project?</div>
-                <div class="font-bold text-2xl text-white mb-4 leading-3">Contact me</div>
-                <a href="#" class="inline-block font-bold rounded-lg bg-white bg-opacity-80 transition ease-in hover:bg-opacity-100 transform hover:-translate-y-1 py-3 px-6 mt-4 shadow-2xl">Contact</a>
+        <section class="container mx-auto bg-primary p-24 mt-8 mb-16 text-white text-center" id="contact">
+            <div class="flex flex-col gap-4 items-center" data-aos="fade">
+                <div class="text-4xl font-bold">Get in touch</div>
+                <div class="text-lg font-medium max-w-sm">I’m available for hire, contact me to talk me about your project !</div>
+                <div class="flex gap-4 mt-4">
+                    <a href="https://discord.com/users/342014383360049163" target="_blank" class="bg-white px-6 py-4 text-black text-md font-medium">
+                        Discord
+                    </a>
+                    <a href="https://github.com/BriqueAuBob" target="_blank" class="bg-white px-6 py-4 text-black text-md font-medium">
+                        GitHub
+                    </a>
+                    <a href="https://twitter.com/briqueaubob" target="_blank" class="bg-white px-6 py-4 text-black text-md font-medium">
+                        Twitter
+                    </a>
+                </div>
             </div>
         </section>
     </div>
 </template>
 
 <script>
-import Project from '@/components/Project.vue'
-import Service from '@/components/Service.vue'
+import AOS from "aos";
+import Experience from "@/components/Experience.vue";
 
-import gca from '@/assets/gca.png'
-import robot from '@/assets/ro-bot.png'
-import wearevalorant from '@/assets/wearevalorant.png'
-import bobadmintoolkit from '@/assets/bobadmintoolkit.png'
+import UnosialLogo from '@/assets/unosial_logo.png';
+import GCALogo from '@/assets/gca_logo.png';
 
-import nginx from '@/assets/nginx.png'
-import php from '@/assets/php.png'
-import lua from '@/assets/lua.png'
-import mysql from '@/assets/mysql.svg'
-import mongodb from '@/assets/mongodb.png'
-import nodejs from '@/assets/nodejs.png'
-import laravel from '@/assets/laravel.png'
-import sqlite from '@/assets/sqlite.png'
-import git from '@/assets/git.png'
-import adonis from '@/assets/adonis.png'
-
-import server from '@/assets/icon_server.svg'
-import eye from '@/assets/icon_eye.svg'
-import tools from '@/assets/icon_tools.svg'
-import rocket from '@/assets/icon_rocket.svg'
+import nodejs from '@/assets/techs/nodejs.png'
+import php from '@/assets/techs/php.png'
+import laravel from '@/assets/techs/laravel.png'
+import adonis from '@/assets/techs/adonis.png'
+import nestjs from '@/assets/techs/nestjs.svg'
+import vuejs from '@/assets/techs/vuejs.png'
+import nuxtjs from '@/assets/techs/nuxtjs.png'
+import html from '@/assets/techs/html.png'
+import css from '@/assets/techs/css.png'
+import sass from '@/assets/techs/sass.png'
+import lua from '@/assets/techs/lua.png'
+import python from '@/assets/techs/python.png'
+import mysql from '@/assets/techs/mysql.svg'
+import mongodb from '@/assets/techs/mongodb.png'
+import sqlite from '@/assets/techs/sqlite.png'
 
 export default {
-    components: { Project, Service },
-    data() {
-        return {
-            icons: {
-                gca, bobadmintoolkit, robot, wearevalorant, nginx, lua, php, nodejs, laravel, adonis, mysql, sqlite, mongodb, git, server, eye, tools, rocket
+    components: { Experience },
+    data: () => ({
+        services: ['UI Design', 'Development', 'Deployment'],
+        experiences: [
+            {
+                classes: 'bg-primary lg:col-span-3',
+                style: 'background-image: url("https://cdn.discordapp.com/banners/455308441360138242/3317e37674e3c5b568f473e85a394ac4.png?size=4096")',
+                logo: UnosialLogo,
+                jobs: 'Developer',
+                from: '04/2022',
+                to: 'now',
+                href: 'https://unosial.com'
+            },
+            {
+                classes: 'bg-primary lg:col-span-2',
+                style: 'background: #5367F5',
+                name: 'UMaestro',
+                jobs: 'Developer & UI Designer',
+                from: '01/2022',
+                to: 'now',
+                hideOverlay: true,
+                href: 'https://umaestro.fr'
+            },
+            {
+                classes: 'bg-primary lg:col-span-2',
+                style: 'background: #0C4DAE',
+                logo: GCALogo,
+                logo_square: true,
+                jobs: 'Developer & UI Designer',
+                from: '04/2020',
+                to: '09/2021',
+                hideOverlay: true,
+                href: 'https://g-ca.fr'
+            },
+        ],
+        projects: [
+            {
+                name: 'Ro-bot.io',
+                classes: 'bg-primary lg:col-span-4 h-96',
+                style: 'background-image: url("./thumbnails/ro-bot.png")',
+            },
+            {
+                name: 'Todo Vue 3',
+                classes: 'bg-primary lg:col-span-2',
+                style: 'background-image: url("./thumbnails/todo-list.png")',
+                href: 'https://todo-vue3.briqueaubob.dev/',
+                github: 'https://github.com/BriqueAuBob/todo-vue3'
+            },
+            {
+                name: 'GitHub Finder',
+                classes: 'bg-primary lg:col-span-3 h-72',
+                style: 'background-image: url("./thumbnails/github-finder.png")',
+                href: 'https://github-finder.briqueaubob.dev/',
+                github: 'https://github.com/BriqueAuBob/github-finder'
+            },
+            {
+                name: 'GiveUp',
+                classes: 'bg-primary lg:col-span-3',
+                style: 'background-image: url("./thumbnails/giveup.png")',
+                href: 'https://giveup.briqueaubob.dev/',
+                github: 'https://github.com/BriqueAuBob/GiveUp'
+            },
+            {
+                name: 'BobAdminToolKit',
+                classes: 'bg-primary lg:col-span-2',
+                style: 'background-image: url("https://media.gmodstore.com/_/script_media/060c48b833d9570e8cf3f65b46b5352f.png")',
+                href: 'https://www.gmodstore.com/market/view/bobadmintoolkit-warns-logs-reports',
+            },
+            {
+                name: 'URL Shortener',
+                classes: 'bg-primary lg:col-span-4',
+                style: 'background-image: url("./thumbnails/url-shortener.png")',
+                github: 'https://github.com/BriqueAuBob/laravel_shortener',
             }
-        }
+        ],
+        skills: [
+            {
+                src: php,
+                color: '#4A568B',
+            },
+            {
+                name: 'Laravel',
+                src: laravel,
+                color: '#F9322C',
+            },
+            {
+                name: 'NodeJS',
+                src: nodejs,
+                color: '#72A465',
+            },
+            {
+                name: 'AdonisJS',
+                src: adonis,
+                color: '#5A45FF',
+            },
+            {
+                name: 'NestJS',
+                src: nestjs,
+                color: '#86152F',
+            },
+            {
+                name: 'VueJS',
+                src: vuejs,
+                color: '#3EAF7C',
+            },
+            {
+                name: 'NuxtJS',
+                src: nuxtjs,
+                color: '#00DC82',
+            },
+            {
+                name: 'HTML',
+                src: html,
+                color: '#D84924',
+            },
+            {
+                name: 'CSS',
+                src: css,
+                color: '#2449D8',
+            },
+            {
+                name: 'SASS',
+                src: sass,
+                color: '#C36192',
+            },
+            {
+                name: 'Lua',
+                src: lua,
+                color: '#00007C',
+            },
+            {
+                name: 'Python',
+                src: python,
+                color: '#366C9C',
+            },
+            {
+                name: 'MySQL',
+                src: mysql,
+                color: '#F29111',
+            },
+            {
+                name: 'MongoDB',
+                src: mongodb,
+                color: '#4CAB3D',
+            },
+            {
+                name: 'SQLite',
+                src: sqlite,
+                color: '#1782CA',
+            },
+        ],
+    }),
+    mounted() {
+        AOS.init();
     },
-    computed: {
-        age() {
-            const birthDate = new Date('Thu Jan 16 2003 01:00:00 GMT+0100');
-            const diff = Date.now() - birthDate.getTime();
-            return Math.abs((new Date(diff)).getFullYear() - 1970);
-        }
-    }
+
 }
 </script>
