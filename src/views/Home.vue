@@ -4,10 +4,10 @@
             <h1 class="text-6xl font-bold" data-aos="zoom-in-up">Brique au bob</h1>
             <h2 class="text-3xl font-semibold mt-4" data-aos="zoom-in-up">French FullStack Developer</h2>
             <div class="flex gap-4 justify-center mt-8" data-aos="zoom-in-up">
-                <a href="#" class="bg-white px-6 py-4 text-black text-md font-medium">
+                <a href="#projects" class="bg-white px-6 py-4 text-black text-md font-medium">
                     View my projects
                 </a>
-                <a href="#" class="px-6 py-4 text-md font-medium">
+                <a href="#contact" class="px-6 py-4 text-md font-medium">
                     Contact me
                 </a>
             </div>
