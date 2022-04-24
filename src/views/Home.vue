@@ -40,7 +40,7 @@
                     <div class="text-4xl font-bold">Next project with you?</div>
                     <div class="text-lg font-medium max-w-lg">I’m available for hire, contact me to talk me about your project !</div>
                     <div class="mt-6">
-                        <a href="#" class="bg-white px-6 py-4 text-black text-md font-medium">
+                        <a href="#contact" class="bg-white px-6 py-4 text-black text-md font-medium">
                             Contact me
                         </a>
                     </div>
