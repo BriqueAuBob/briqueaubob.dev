@@ -16,7 +16,7 @@
             <div class="bg-gradient-to-t from-transparent to-primary absolute top-0 h-52 w-full"></div>
             <div class="bg-gradient-to-b from-transparent to-dark absolute bottom-0 h-48 w-full"></div>
         </header>
-        <section class="container mx-auto flex text-white py-32 gap-16 items-center px-4">
+        <section class="container mx-auto flex text-white py-24 gap-16 items-center px-4">
             <div class="flex flex-col gap-4" data-aos="fade">
                 <div class="text-4xl font-bold">Services I Provide</div>
                 <div class="text-lg font-medium max-w-lg">Get the best variety of skills for your growing project</div>
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </section>
-        <section class="container mx-auto text-white py-16 px-4" id="experiences">
+        <section class="container mx-auto text-white py-24 px-4" id="experiences">
             <div class="relative">
                 <div class="font-bold text-5xl absolute -top-8 z-10" data-aos="fade">Experiences</div>
             </div>
@@ -68,7 +68,7 @@
             <img class="absolute top-0 left-0 -z-10 w-1/2" src="@/assets/shape_rect.svg" />
             <img class="absolute top-0 -right-1/4 -z-10 w-1/2 -scale-100" src="@/assets/shape_rect.svg" />
         </section>
-        <section class="container mx-auto text-white py-16 px-4" id="skills">
+        <section class="container mx-auto text-white py-24 px-4" id="skills">
             <div class="font-bold text-5xl" data-aos="fade">Tech Stack</div>
             <div class="flex flex-wrap gap-4 mt-6">
                 <div v-for="(skill, id) of skills" :key="id" class="px-4 py-3 flex items-center gap-2 shadow-lg flex-start" :style="`background: ${skill.color}`" data-aos="zoom-in-up">
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </section>
-        <section class="container mx-auto bg-primary p-24 mt-8 mb-16 text-white text-center" id="contact">
+        <section class="container mx-auto bg-primary p-24 mt-24 mb-24 text-white text-center" id="contact">
             <div class="flex flex-col gap-4 items-center" data-aos="fade">
                 <div class="text-4xl font-bold">Get in touch</div>
                 <div class="text-lg font-medium max-w-sm">I’m available for hire, contact me to talk me about your project !</div>
