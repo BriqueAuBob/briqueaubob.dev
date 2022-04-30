@@ -11,8 +11,8 @@
                     Contact me
                 </a>
             </div>
-            <img src="@/assets/shape_wavy.svg" class="absolute left-0 top-1/2 -translate-y-1/2 hidden md:block w-1/4 lg:w-1/3" />
-            <img src="@/assets/shape_wavy.svg" class="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block w-1/4 lg:w-1/3 -scale-100" />
+            <!-- <img src="@/assets/shape_wavy.svg" class="absolute left-0 top-1/2 -translate-y-1/2 hidden md:block w-1/4 lg:w-1/3" />
+            <img src="@/assets/shape_wavy.svg" class="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block w-1/4 lg:w-1/3 -scale-100" /> -->
             <div class="bg-gradient-to-t from-transparent to-primary absolute top-0 h-52 w-full"></div>
             <div class="bg-gradient-to-b from-transparent to-dark absolute bottom-0 h-48 w-full"></div>
         </header>
