@@ -1,6 +1,6 @@
 <template>
     <div class="overflow-x-hidden">
-        <header class="relative bg-primary py-72 text-center text-white" style="background: url('./grid-waves.png') no-repeat center center / cover, #290DD3;" data-aos="fade">
+        <header class="relative bg-primary py-72 text-center text-white" style="background: #290DD3;" data-aos="fade">
             <h1 class="text-6xl font-bold" data-aos="zoom-in-up">Brique au bob</h1>
             <h2 class="text-3xl font-semibold mt-4" data-aos="zoom-in-up">French FullStack Developer</h2>
             <div class="flex gap-4 justify-center mt-8" data-aos="zoom-in-up">
@@ -14,9 +14,9 @@
             <!-- <img src="@/assets/shape_wavy.svg" class="absolute left-0 top-1/2 -translate-y-1/2 hidden md:block w-1/4 lg:w-1/3" />
             <img src="@/assets/shape_wavy.svg" class="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block w-1/4 lg:w-1/3 -scale-100" /> -->
             <div class="bg-gradient-to-t from-transparent to-primary absolute top-0 h-52 w-full"></div>
-            <div class="bg-gradient-to-b from-transparent to-dark absolute bottom-0 h-48 w-full"></div>
+            <!-- <div class="bg-gradient-to-b from-transparent to-dark absolute bottom-0 h-48 w-full"></div> -->
         </header>
-        <section class="container mx-auto flex text-white py-24 gap-16 items-center px-4">
+        <section class="container mx-auto flex text-white py-24 gap-16 items-center px-4 mt-16">
             <div class="flex flex-col gap-4" data-aos="fade">
                 <div class="text-4xl font-bold">Services I Provide</div>
                 <div class="text-lg font-medium max-w-lg">Get the best variety of skills for your growing project</div>
@@ -103,6 +103,8 @@ import Experience from "@/components/Experience.vue";
 
 import UnosialLogo from '@/assets/unosial_logo.png';
 import GCALogo from '@/assets/gca_logo.png';
+import UMaestroLogo from '@/assets/umaestro_box_logo.png';
+import WuiBitsLogo from '@/assets/wuibits_box_logo.png';
 
 import nodejs from '@/assets/techs/nodejs.png'
 import php from '@/assets/techs/php.png'
@@ -127,17 +129,8 @@ export default {
         experiences: [
             {
                 classes: 'bg-primary lg:col-span-3',
-                style: 'background-image: url("https://cdn.discordapp.com/banners/455308441360138242/3317e37674e3c5b568f473e85a394ac4.png?size=4096")',
-                logo: UnosialLogo,
-                jobs: 'Developer',
-                from: '04/2022',
-                to: 'now',
-                href: 'https://unosial.com'
-            },
-            {
-                classes: 'bg-primary lg:col-span-2',
-                style: 'background: #5367F5',
-                name: 'UMaestro',
+                style: 'background-image: url("./thumbnails/umaestro.png");',
+                logo: UMaestroLogo,
                 jobs: 'Developer & UI Designer',
                 from: '01/2022',
                 to: 'now',
@@ -146,6 +139,24 @@ export default {
             },
             {
                 classes: 'bg-primary lg:col-span-2',
+                style: 'background-image: url("./thumbnails/wuibits.png");',
+                logo: WuiBitsLogo,
+                jobs: 'Developer',
+                from: '12/2021',
+                to: 'now',
+                href: 'https://wuibits.com'
+            },
+            {
+                classes: 'bg-primary lg:col-span-2',
+                style: 'background-image: url("https://cdn.discordapp.com/banners/455308441360138242/3317e37674e3c5b568f473e85a394ac4.png?size=4096")',
+                logo: UnosialLogo,
+                jobs: 'Developer',
+                from: '04/2022',
+                to: '06/2022',
+                href: 'https://unosial.com'
+            },
+            {
+                classes: 'bg-primary lg:col-span-1',
                 style: 'background: #0C4DAE',
                 logo: GCALogo,
                 logo_square: true,
