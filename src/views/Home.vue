@@ -143,7 +143,7 @@ export default {
                 logo: WuiBitsLogo,
                 jobs: 'Developer',
                 from: '12/2021',
-                to: 'now',
+                to: '09/2022',
                 href: 'https://wuibits.com'
             },
             {
